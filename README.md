@@ -13,11 +13,12 @@
 ## 스터디 멤버
 |   ![](https://github.com/SayisMe.png?size=100)    | ![](https://github.com/minseong0324.png?size=100)  | ![](https://github.com/juwonleee.png?size=100) | ![](https://github.com/clicelee.png?size=100) |
 |:------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|
-|         [정세희](https://github.com/SayisMe)         |       [김민성](https://github.com/minseong0324)       |      [이주원](https://github.com/juwonleee)       |      [[이지민](https://github.com/clicelee)
+|         [정세희](https://github.com/SayisMe)         |       [김민성](https://github.com/minseong0324)       |      [이주원](https://github.com/juwonleee)       |      [이지민](https://github.com/clicelee)
 
 ## 스터디 시간
 
 일시 : 격주 수요일 19:00 - 22:00
+
 장소 : SKT타워
 
 ## 스터디 방식
