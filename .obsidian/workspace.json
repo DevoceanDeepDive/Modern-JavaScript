@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a413c04652530b5c",
+        "id": "92b8397c2509733c",
         "type": "tabs",
         "children": [
           {
-            "id": "c55b62dc40f776eb",
+            "id": "07ba44d139f16dc4",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "clicelee/assets/IMG_1BFE577289BD-1.jpeg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "clicelee/assets/IMG_1BFE577289BD-1.jpeg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "clicelee/assets/IMG_1BFE577289BD-1.jpeg"
+              }
             }
           }
         ]
@@ -140,6 +144,15 @@
   },
   "active": "6861dbdba08bf6d3",
   "lastOpenFiles": [
+    "clicelee/04강.md",
+    "clicelee/assets/IMG_EFED7B257E7B-1.jpeg",
+    "clicelee/assets/IMG_1BFE577289BD-1.jpeg",
+    "clicelee/assets/IMG_50D55E86D0E7-1.jpeg",
+    "clicelee/assets",
+    "clicelee/04강/04강.md",
+    "test",
+    "clicelee/04강",
+    "clicelee/hello world.md",
     "SayisMe",
     "clicelee",
     "juwonleee",
