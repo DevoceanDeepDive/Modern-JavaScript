@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "92b8397c2509733c",
+        "id": "a413c04652530b5c",
         "type": "tabs",
         "children": [
           {
-            "id": "07ba44d139f16dc4",
+            "id": "c55b62dc40f776eb",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "clicelee/04강 값/04강.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "clicelee/assets/IMG_1BFE577289BD-1.jpeg",
+                "file": "clicelee/04강 값/04강.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "clicelee/assets/IMG_1BFE577289BD-1.jpeg",
+                "file": "clicelee/04강 값/04강.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "clicelee/assets/IMG_1BFE577289BD-1.jpeg"
+                "file": "clicelee/04강 값/04강.md"
               }
             }
           }
@@ -142,17 +146,23 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "6861dbdba08bf6d3",
+  "active": "c55b62dc40f776eb",
   "lastOpenFiles": [
-    "clicelee/04강.md",
-    "clicelee/assets/IMG_EFED7B257E7B-1.jpeg",
-    "clicelee/assets/IMG_1BFE577289BD-1.jpeg",
-    "clicelee/assets/IMG_50D55E86D0E7-1.jpeg",
-    "clicelee/assets",
-    "clicelee/04강/04강.md",
-    "test",
-    "clicelee/04강",
-    "clicelee/hello world.md",
+    "juwonleee/asset/6강/스크린샷.md",
+    "clicelee/05강 표현식과 문/05 표현식과 문.md",
+    "clicelee/04강 값/assets/Screenshot 2024-07-15 at 11.52.16 AM.png",
+    "clicelee/04강 값/assets/Screenshot 2024-07-15 at 10.33.28 PM.png",
+    "clicelee/04강 값/assets/Pasted image 20240715223005.png",
+    "clicelee/04강 값/assets/Pasted image 20240715222240.png",
+    "clicelee/04강 값/assets/IMG_F57981D08232-1.jpeg",
+    "clicelee/04강 값/assets/IMG_F39B3F942C5F-1.jpeg",
+    "clicelee/04강 값/assets/IMG_EFED7B257E7B-1.jpeg",
+    "clicelee/04강 값/assets/IMG_50D55E86D0E7-1.jpeg",
+    "clicelee/04강 값/assets/IMG_36D21E32DCD1-1.jpeg",
+    "clicelee/04강 값/assets/IMG_1BFE577289BD-1.jpeg",
+    "clicelee/04강 값/assets",
+    "clicelee/04강 값/04강.md",
+    "juwonleee/06강.md",
     "SayisMe",
     "clicelee",
     "juwonleee",
