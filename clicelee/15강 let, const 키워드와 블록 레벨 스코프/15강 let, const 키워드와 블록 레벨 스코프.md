@@ -135,10 +135,55 @@ Temporal Dead Zone
 
 
 ## 15.2.4 전역 객체와 let
+*var 키워드로 선언한 전역변수와 전역함수, 그리고 선언하지 않은 변수에 값을 할당한 암묵적 전역은 전역 객체 window의 프로터피가 된다. 전역 객체의 프로퍼티를 참조할 때 window를 생략할 수 있다*
 
-*var 키워드로 선언한 전역변수와 전역함수, 그리고 선언하지 않은 변수에 값을 할당한 암묵적 전역은 전역 객체 window의 프로터피가 된다. 전역 객체의 프포퍼티를 참조할 때 window를 생략할 수 있다*
+### 여기서 window 객체란?
+`window` 객체는 브라우저 환경에서의 전역 객체이다 
+즉, 웹 페이지를 로드하면 자동으로 생성되며, 자바스크립트 코드 어디에서든 접근할 수 있는 객체이다
 
-(이 부분 잘 이해를 못 함. 추가 자료를 찾고 설명을 추가해두겠습니다)
+window 객체의 3가지 특징에 대해 알아보자
+
+#### 1.  전역 변수와 함수의 컨테이너
+브라우저 환경에서는 모든 **전역 변수**와 함수가 `window` 객체의 프로퍼티가 된다
+```js
+var globalVar = "Hello, World!";
+console.log(window.globalVar); //Hello, World!
+```
+
+단, 전역변수만 window 객체의 프로퍼티이다
+지역 변수 var의 경우는 접근 불가하다
+```js
+var globalVar = "Hello, World!";
+function foo(){
+    var localVar="Hi";
+}
+console.log(window.globalVar); //Hello, World!
+console.log(window.localVar); // undefined
+```
+
+
+
+#### 2. 브라우저 제어:
+`window` 객체는 브라우저 창이나 프레임을 제어할 수 있는 다양한 메서드와 프로퍼티를 제공한다
+
+```js
+var result = window.confirm("탈퇴하시겠습니까?");
+console.log(result); // true 또는 false
+typeof(result) //'boolean'
+```
+![](https://i.imgur.com/noV0rbH.png)
+
+#### 3.  DOM 접근
+`window` 객체를 통해 `document` 객체에 접근할 수 있으며, 이를 통해 DOM(Document Object Model)을 조작할 수 있다.
+개발할때 종종 쓰인다
+`console.log(window.document);`
+
+
+#### 정리
+전역 변수와 함수는 `window` 객체의 프로퍼티로 취급되기 때문에, `window`를 생략하고 전역 변수와 함수에 접근할 수 있다. (너무 당연하니까 생략하는 느낌)
+`console.log(window.document);` -> `console.log(document);`
+
+
 
 ![](https://i.imgur.com/NiF7VyP.png)
 
