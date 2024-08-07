@@ -1,5 +1,4 @@
 
-![](https://i.imgur.com/8Ccqy2i.png)
 # 15.1 `var` 키워드로 선언한 변수의 문제점
 
 ES5 까지는 `var` 키워드로만 변수를 선언할 수 있었다
@@ -172,6 +171,21 @@ console.log(result); // true 또는 false
 typeof(result) //'boolean'
 ```
 ![](https://i.imgur.com/noV0rbH.png)
+_Q. var 키워드로 선언한 전역변수와 전역함수, 그리고 선언하지 않은 변수에 값을 할당한 암묵적 전역은 전역 객체 `window`의 프로터피가 된다. 전역 객체의 프로퍼티를 참조할 때 `window`를 생략할 수 있다 라고 하셨는데,_
+
+_기본적으로 `window.~~`라고 접근할 수 있는 프로퍼티들이 있는데 예를들어 `window.alert`가 있잖아요_
+
+`var alert = 1;` 이라고 선언 및 초기화를 했을 때 alert를 출력하면 뭐가 찍히나요?
+
+_A. `var alert = 1;`으로 선언하면, `alert`는 숫자 1로 덮어쓰여진다. 이로 인해 `alert` 함수는 더 이상 사용할 수 없고, `alert`를 출력하면 1이 출력된다_
+
+_alert는 사용하는건데 할당 가능한게 신기하다_
+
+##### 열심히 찾아본 alert=1은 되는데 function=1은 안 되는 이유: 예약어와 메서드의 차이
+자바스크립트에는 여러 예약어가 있고, 예약어는 *변수명*, 함수명, 객체의 속성 명으로 사용할 수 없다
+예약어: `function` `var` `let` `const` `if` `else` `for` `while` `return` ...
+대신, `alert`는 예약어가 아니다. `alert`는 ==전역 객체의 메서드==이다 그래서 덮어쓸 수 있는것이다
+메세드 이름: `console` `Math` `Date` ... 은 변수명으로 사용 가능하다, 대신 변수에 할당하는 순간 고유의 메서드 기능은 사용하지 못 한다
 
 #### 3.  DOM 접근
 `window` 객체를 통해 `document` 객체에 접근할 수 있으며, 이를 통해 DOM(Document Object Model)을 조작할 수 있다.
@@ -251,6 +265,66 @@ const club={
 }
 club.name='Devocean Young' //변경 가능
 ```
+# 질문
+
+Q. const 키워드로 선언된 변수에 객체 할당한 경우, 값 변경이 가능한 원리가 궁금합니다.
+
+Q. `const` 키워드로 선언된 변수에 객체를 할당한 경우, 왜 객체의 프로퍼티는 변경할 수 있는지 궁금해요.
+
+A. `const`로 선언된 변수는 참조(주소) 자체를 변경할 수 없지만, 객체의 속성은 변경할 수 있다. 이는 `const`가 객체의 불변성을 보장하는 것이 아니라, 변수의 참조를 고정하기 때문이다.
+
+이는 `const`가 변수의 참조를 고정하기 때문이지, 객체 내부의 
+![](https://i.imgur.com/N8A37g7.png)
+
+![](https://i.imgur.com/MZzj6FH.png)
+불변성을 보장하지 않기 때문이다.
+
+
+let 이나 var로 선언된 변수는 값을 변경할때 참조하는 주소 자체가 바뀌게 된다
+
+대신 const는 참조하는 주소 자체는 고정이고, 그 안의 값이 객체인 경우에만 바뀔 수 있는 것이다
+
+
+```jsx
+const club = {
+  name: 'Devocean'
+};
+// club 변수가 가리키는 메모리 주소는 0x1234라고 가정
+
+club.name = 'Devocean Young';
+// club.name을 변경하는 것은 메모리 주소 0x1234 내의 데이터를 변경하는 것
+
+// 만약 club을 다른 객체로 재할당하려고 하면:
+club = { name: 'New Club' };
+// 이는 club 변수가 새로운 메모리 주소를 가리키도록 하려는 시도이므로, 에러가 발생함
+```
+
+
+![](https://i.imgur.com/vdF1yB5.png)
+
+
+```jsx
+var club2 = {
+  name: 'Devocean'
+};
+// club 변수가 가리키는 메모리 주소는 0x1234라고 가정
+
+club2.name = 'Devocean Young';
+// club.name을 변경하는 것은 메모리 주소 0x1234 내의 데이터를 변경하는 것
+console.log(club2.name);
+
+// 만약 club을 다른 객체로 재할당하려고 하면:
+club = { name: 'New Club' };
+// 이는 club 변수가 새로운 메모리 주소를 가리키도록 하려는 시도인데, var라서 재할당이 가능
+console.log(club2.name);
+```
+
+![](https://i.imgur.com/FGQKCuP.png)
+
+
+
+⇒ useState도 이 원리를 사용한다
+
 
 # 15.4 var vs let vs const
 
@@ -260,4 +334,6 @@ club.name='Devocean Young' //변경 가능
 
 >정리
 >변수 선언에는 기본적으로` const`를 사용하고, 재할당이 필요한 경우에만 `let`을 한정하여 사용하는 것이 좋다
+
+
 
